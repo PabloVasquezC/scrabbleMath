@@ -99,23 +99,33 @@ body {
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         
-        .seccion-jugador {
-            border-bottom: .5px solid antiquewhite;
-            height: 120px;
+        .fichas-numericas {
+            height: auto;
             width: 190px;
             display: flex;
             flex-wrap: wrap;
             gap: 3px;
             justify-content: center;
+            /* border: 1px solid; */
+            margin: 10px 0;
+        }
+
+        #fichas-operadoras-1, #fichas-operadoras-2 {
+            /* width: 150px; */
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            justify-content: center;
+            /* border: 1px solid; */
+            margin: 10px 0;
         }
     }
 }
 
-#fichas-operadoras-1, #fichas-operadoras-2 {
-    width: 150px;
-}
+
 
 
 #fila {
