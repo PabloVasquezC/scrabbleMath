@@ -1,58 +1,13 @@
-// const tablero = document.getElementById('tablero');
-// const fichas = document.getElementsByClassName('ficha');
-// const casilla = document.getElementsByClassName('casilla');
 
-// console.log(casilla)
-
-
-// for(let ficha of fichas) {
-//     ficha.addEventListener("dragstart", function(e) {
-//         let seleccionado = e.target;
-    
-//     tablero.addEventListener("dragover", function(e) {
-//         e.preventDefault();
-//     });
-
-//     casilla.addEventListener("drop", function(e){
-//         casilla.appendChild(seleccionado);
-//         seleccionado = null;
-//     })
-    
-
-//     })
-
-// }
-
-
-// const tablero = document.getElementById('tablero');
-// const fichas = document.getElementsByClassName('ficha');
-// const casillas = document.getElementsByClassName('casilla');
-
-// for (let ficha of fichas) {
-//     ficha.addEventListener("dragstart", function(e) {
-//         let seleccionado = e.target;
-//     });
-
-//     for (let casilla of casillas) {
-//         casilla.addEventListener("dragover", function(e) {
-//             e.preventDefault();
-//         });
-
-//         casilla.addEventListener("drop", function(e) {
-//             e.preventDefault();
-//             casilla.appendChild(seleccionado);
-//             seleccionado = null;
-//         });
-//     }
-// }
 
 const tablero = document.getElementById('tablero');
-const fichas = document.getElementsByClassName('ficha');
+const fichasNumericas = document.getElementsByClassName('ficha-numerica');
+const fichasOperadoras = document.getElementsByClassName('ficha-operadora');
 const casillas = document.getElementsByClassName('casilla');
 
 let fichaSeleccionada = null;
 
-for (let ficha of fichas) {
+for (let ficha of fichasNumericas) {
     ficha.addEventListener("dragstart", function (e) {
         fichaSeleccionada = e.target;
     });
@@ -71,3 +26,26 @@ for (let casilla of casillas) {
         }
     });
 }
+
+for (let ficha of fichasOperadoras) {
+    ficha.addEventListener("dragstart", function (e) {
+        // Clona el elemento antes de arrastrarlo
+        fichaSeleccionada = e.target.cloneNode(true);
+    });
+}
+
+for (let casilla of casillas) {
+    casilla.addEventListener("dragover", function (e) {
+        e.preventDefault();
+    });
+
+    casilla.addEventListener("drop", function (e) {
+        e.preventDefault();
+        if (fichaSeleccionada) {
+            // Clona el elemento antes de agregarlo a la casilla
+            casilla.appendChild(fichaSeleccionada.cloneNode(true));
+            fichaSeleccionada = null;
+        }
+    });
+}
+

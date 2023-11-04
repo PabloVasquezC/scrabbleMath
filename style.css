@@ -44,7 +44,7 @@ body {
 }
 
 
-.ficha {
+.ficha-numerica, .ficha-operadora {
     height: 35px;
     width: 35px;
     border-radius: 10%;
@@ -62,14 +62,17 @@ body {
     }
 }
 
-.ficha:hover {
-    transform: translateY(-3px)
-}
 
 
 
-.jugador .ficha {
+
+.jugador .ficha-numerica, .jugador .ficha-operadora {
     cursor: pointer;
+    
+
+    &:hover {
+        transform: translateY(-3px)
+    }
 }
 
 
@@ -108,6 +111,10 @@ body {
             justify-content: center;
         }
     }
+}
+
+#fichas-operadoras-1, #fichas-operadoras-2 {
+    width: 150px;
 }
 
 
