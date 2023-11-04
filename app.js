@@ -1,24 +1,73 @@
+// const tablero = document.getElementById('tablero');
+// const fichas = document.getElementsByClassName('ficha');
+// const casilla = document.getElementsByClassName('casilla');
+
+// console.log(casilla)
+
+
+// for(let ficha of fichas) {
+//     ficha.addEventListener("dragstart", function(e) {
+//         let seleccionado = e.target;
+    
+//     tablero.addEventListener("dragover", function(e) {
+//         e.preventDefault();
+//     });
+
+//     casilla.addEventListener("drop", function(e){
+//         casilla.appendChild(seleccionado);
+//         seleccionado = null;
+//     })
+    
+
+//     })
+
+// }
+
+
+// const tablero = document.getElementById('tablero');
+// const fichas = document.getElementsByClassName('ficha');
+// const casillas = document.getElementsByClassName('casilla');
+
+// for (let ficha of fichas) {
+//     ficha.addEventListener("dragstart", function(e) {
+//         let seleccionado = e.target;
+//     });
+
+//     for (let casilla of casillas) {
+//         casilla.addEventListener("dragover", function(e) {
+//             e.preventDefault();
+//         });
+
+//         casilla.addEventListener("drop", function(e) {
+//             e.preventDefault();
+//             casilla.appendChild(seleccionado);
+//             seleccionado = null;
+//         });
+//     }
+// }
+
 const tablero = document.getElementById('tablero');
 const fichas = document.getElementsByClassName('ficha');
-const casilla = document.getElementsByClassName('casilla');
+const casillas = document.getElementsByClassName('casilla');
 
-console.log(casilla)
+let fichaSeleccionada = null;
 
+for (let ficha of fichas) {
+    ficha.addEventListener("dragstart", function (e) {
+        fichaSeleccionada = e.target;
+    });
+}
 
-for(let ficha of fichas) {
-    ficha.addEventListener("dragstart", function(e) {
-        let seleccionado = e.target;
-    
-    tablero.addEventListener("dragover", function(e) {
+for (let casilla of casillas) {
+    casilla.addEventListener("dragover", function (e) {
         e.preventDefault();
     });
 
-    tablero.addEventListener("drop", function(e){
-        casilla.appendChild(seleccionado);
-        seleccionado = null;
-    })
-    
-
-    })
-
+    casilla.addEventListener("drop", function (e) {
+        e.preventDefault();
+        if (fichaSeleccionada) {
+            casilla.appendChild(fichaSeleccionada);
+            fichaSeleccionada = null;
+        }
+    });
 }

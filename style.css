@@ -115,7 +115,7 @@ body {
     display: flex;
     flex-direction: row;
 
-    #casilla {
+    .casilla {
         height: 40px;
         width: 40px;
         border: .01px solid;
