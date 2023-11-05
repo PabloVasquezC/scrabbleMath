@@ -57,9 +57,10 @@ body {
     transition: 200ms;
     
 
-    .contenido-ficha {
+    .numero-aleatorio, .operador {
         font-size: 33px;
     }
+
 }
 
 

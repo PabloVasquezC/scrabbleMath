@@ -1,9 +1,35 @@
-
-
 const tablero = document.getElementById('tablero');
 const fichasNumericas = document.getElementsByClassName('ficha-numerica');
 const fichasOperadoras = document.getElementsByClassName('ficha-operadora');
 const casillas = document.getElementsByClassName('casilla');
+const numerosAleatorios = document.getElementsByClassName('numero-aleatorio');
+
+
+function generadorNumeroAlearorio() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(Math.round(Math.random() * 9))
+        }, 30)
+    })
+    
+
+}
+
+async function blabla() {
+    for(let i = 0; i < numerosAleatorios.length; i++) {
+        numerosAleatorios[i].innerHTML = await generadorNumeroAlearorio()
+    }
+}
+
+blabla()
+
+
+
+
+
+
+
+
 
 let fichaSeleccionada = null;
 
