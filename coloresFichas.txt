@@ -1,0 +1,46 @@
+que las fichas operadoras tengan un color distintivo
+
+(despues del signo igual solo pueden ir numeros)
+
+ningun numero puede llegar mas de 3 cifras
+
+todas las operaciones deben partir de una operacion que ya este en el tablero exceptop la primera
+
+
+(tiene que tener un tiempo 30 seg)
+
+las fichas quedan fijas en el tablero una vez terminado tu jugada
+
+tu jugada solo puede terminar si la ecuación es correcta
+
+(solo puedes poner un signo antes del igual por jugada)
+
+SISTEMA DE PUNTUACION
+---------------------
+
+SUMA = 2PTS.
+RESTA = 3PTS.
+MULTIPLICACION = 5PTS.
+DIVISION = 9PTS.
+
+eso y mas la cantidad de fichas que ocupaste.
+
+es decir 1 ficha es = 1pts. por si solo.
+
+---------------------
+
+
+que la escala sea modificable tablero sea modificable.
+
+
+probar distintas cantidad de fichas en la mano inicial (propuesta de 15).
+
+
+
+
+
+
+
+
+
+

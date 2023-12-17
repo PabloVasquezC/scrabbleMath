@@ -136,34 +136,26 @@
                     </div>
                 </div>
 
+                
+
                 <div id="fichas-operadoras-1" class="fichas-operadoras seccion-jugador">
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-suma" draggable="true">
                         <p class="operador">+</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-resta" draggable="true">
                         <p class="operador">-</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-multiplicacion" draggable="true">
                         <p class="operador">*</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-division" draggable="true">
                         <p class="operador">/</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-igualdad" draggable="true">
                         <p class="operador">=</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">(</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">)</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">.</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">^</p>
-                    </div>
+                    
+                    
                     
                     
 
@@ -172,8 +164,22 @@
                 <div id="puntaje-1" class="puntaje seccion-jugador"> -->
 
                 </div>
+                <!-- Contador -->
+                <!-- <div class="borde-contenedor-contador">
+                    <div class="contenedor-contador">
+                        <p id="contador-segundos"></p>
+                        :
+                        <p id="subcontador-segundos"></p>
+                    </div>
+                </div> -->
             </div>
         </div>
+
+        <button class="stop">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+        </button>
+
+
         <div id="borde-tablero">
             <div id="tablero">
                 <div id=fila class="fila-1">
@@ -188,6 +194,8 @@
                     <div class="casilla" id="casilla-9.1"></div>
                     <div class="casilla" id="casilla-10.1"></div>
                     <div class="casilla" id="casilla-11.1"></div>
+                    <div class="casilla" id="casilla-12.1"></div>
+                    <div class="casilla" id="casilla-13.1"></div>
                 </div>
                 <div id=fila class="fila-2">
                     <div class="casilla" id="casilla-1.2"></div>
@@ -201,6 +209,8 @@
                     <div class="casilla" id="casilla-9.2"></div>
                     <div class="casilla" id="casilla-10.2"></div>
                     <div class="casilla" id="casilla-11.2"></div>
+                    <div class="casilla" id="casilla-11.2"></div>
+                    <div class="casilla" id="casilla-12.2"></div>
                 </div>
                 <div id=fila class="fila-3">
                     <div class="casilla" id="casilla-1.3"></div>
@@ -214,6 +224,8 @@
                     <div class="casilla" id="casilla-9.3"></div>
                     <div class="casilla" id="casilla-10.3"></div>
                     <div class="casilla" id="casilla-11.3"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-4">
                     <div class="casilla" id="casilla-1.4"></div>
@@ -227,6 +239,8 @@
                     <div class="casilla" id="casilla-9.4"></div>
                     <div class="casilla" id="casilla-10.4"></div>
                     <div class="casilla" id="casilla-11.4"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-5">
                     <div class="casilla" id="casilla-1.5"></div>
@@ -240,6 +254,8 @@
                     <div class="casilla" id="casilla-9.5"></div>
                     <div class="casilla" id="casilla-10.5"></div>
                     <div class="casilla" id="casilla-11.5"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-6">
                     <div class="casilla" id="casilla-1.6"></div>
@@ -247,12 +263,16 @@
                     <div class="casilla" id="casilla-3.6"></div>
                     <div class="casilla" id="casilla-4.6"></div>
                     <div class="casilla" id="casilla-5.6"></div>
-                    <div class="casilla" id="casilla-6.6"></div>
+                    <div class="casilla" id="casilla-6.6">
+                        
+                    </div>
                     <div class="casilla" id="casilla-7.6"></div>
                     <div class="casilla" id="casilla-8.6"></div>
                     <div class="casilla" id="casilla-9.6"></div>
                     <div class="casilla" id="casilla-10.6"></div>
                     <div class="casilla" id="casilla-11.6"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-7">
                     <div class="casilla" id="casilla-1.7"></div>
@@ -261,11 +281,17 @@
                     <div class="casilla" id="casilla-4.7"></div>
                     <div class="casilla" id="casilla-5.7"></div>
                     <div class="casilla" id="casilla-6.7"></div>
-                    <div class="casilla" id="casilla-7.7"></div>
+                    <div class="casilla" id="casilla-7.7">
+                        <div class="signo-igualdad ficha-operadora" draggable="true">
+                            <p class="operador">=</p>
+                        </div>
+                    </div>
                     <div class="casilla" id="casilla-8.7"></div>
                     <div class="casilla" id="casilla-9.7"></div>
                     <div class="casilla" id="casilla-10.7"></div>
                     <div class="casilla" id="casilla-11.7"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-8">
                     <div class="casilla" id="casilla-1.8"></div>
@@ -279,6 +305,8 @@
                     <div class="casilla" id="casilla-9.8"></div>
                     <div class="casilla" id="casilla-10.8"></div>
                     <div class="casilla" id="casilla-11.8"></div>           
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-9">
                     <div class="casilla" id="casilla-1.9"></div>
@@ -292,6 +320,8 @@
                     <div class="casilla" id="casilla-9.9"></div>
                     <div class="casilla" id="casilla-10.9"></div>
                     <div class="casilla" id="casilla-11.9"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-10">
                     <div class="casilla" id="casilla-1.10"></div>
@@ -305,6 +335,8 @@
                     <div class="casilla" id="casilla-9.10"></div>
                     <div class="casilla" id="casilla-10.10"></div>
                     <div class="casilla" id="casilla-11.10"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
                 <div id=fila class="fila-11">
                     <div class="casilla" id="casilla-1.11"></div>
@@ -318,9 +350,49 @@
                     <div class="casilla" id="casilla-9.11"></div>
                     <div class="casilla" id="casilla-10.11"></div>
                     <div class="casilla" id="casilla-11.11"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
+                </div>
+                <div id=fila class="fila-12">
+                    <div class="casilla" id="casilla-1.12"></div>
+                    <div class="casilla" id="casilla-2.12"></div>
+                    <div class="casilla" id="casilla-3.12"></div>
+                    <div class="casilla" id="casilla-4.12"></div>
+                    <div class="casilla" id="casilla-5.12"></div>
+                    <div class="casilla" id="casilla-6.12"></div>
+                    <div class="casilla" id="casilla-7.12"></div>
+                    <div class="casilla" id="casilla-8.12"></div>
+                    <div class="casilla" id="casilla-9.12"></div>
+                    <div class="casilla" id="casilla-10.12"></div>
+                    <div class="casilla" id="casilla-11.12"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
+                </div>
+                <div id=fila class="fila-13">
+                    <div class="casilla" id="casilla-1.11"></div>
+                    <div class="casilla" id="casilla-2.11"></div>
+                    <div class="casilla" id="casilla-3.11"></div>
+                    <div class="casilla" id="casilla-4.11"></div>
+                    <div class="casilla" id="casilla-5.11"></div>
+                    <div class="casilla" id="casilla-6.11"></div>
+                    <div class="casilla" id="casilla-7.11"></div>
+                    <div class="casilla" id="casilla-8.11"></div>
+                    <div class="casilla" id="casilla-9.11"></div>
+                    <div class="casilla" id="casilla-10.11"></div>
+                    <div class="casilla" id="casilla-11.11"></div>
+                    <div class="casilla" id="casilla-10.1"></div>
+                    <div class="casilla" id="casilla-11.1"></div>
                 </div>
             </div>
         </div>
+
+        
+            
+    
+        <button class="stop">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+        </button>
+
 
         <div class="borde-jugador">
             <div id="jugador-2" class="jugador">
@@ -447,35 +519,31 @@
                     </div>
                 </div>
                 <div id="fichas-operadoras-2" class="fichas-operadoras seccion-jugador">
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-suma" draggable="true">
                         <p class="operador">+</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-resta" draggable="true">
                         <p class="operador">-</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-multiplicacion" draggable="true">
                         <p class="operador">*</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-division" draggable="true">
                         <p class="operador">/</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
+                    <div class="ficha-operadora signo-igualdad" draggable="true">
                         <p class="operador">=</p>
                     </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">(</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">)</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">.</p>
-                    </div>
-                    <div class="ficha-operadora" draggable="true">
-                        <p class="operador">^</p>
-                    </div>
+                    
                 </div>
                 <!-- <div id="puntaje-2" class="puntaje seccion-jugador"></div> -->
+                <!-- <div class="borde-contenedor-contador-derecho">
+                    <div class="contenedor-contador-derecho">
+                        <p id="contador-segundos-derecho"></p>
+                        :
+                        <p id="subcontador-segundos-derecho"></p>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

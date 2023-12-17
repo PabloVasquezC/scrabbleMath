@@ -15,6 +15,50 @@ function generadorNumeroAlearorio() {
 
 }
 
+let contadorSegundos = 30
+let subContadorSegundos = 99
+
+let intervalo = setInterval(() => {
+    let contadorSegundosStr = contadorSegundos.toString().padStart(2, '0');
+    document.getElementById('contador-segundos').innerHTML = contadorSegundosStr;
+    contadorSegundos--;
+
+    if (contadorSegundos > 19) {
+        document.getElementById('contador-segundos').style.color = 'green';
+    } else if (contadorSegundos > 9) { 
+        document.getElementById('contador-segundos').style.color = 'yellow';
+    } else {
+        document.getElementById('contador-segundos').style.color = 'red';
+    }
+
+    if (contadorSegundos <= -1) {
+        clearInterval(intervalo);
+    }
+}, 1000);
+
+let subIntervalo = setInterval(() => {
+    let subContadorSegundosStr = subContadorSegundos.toString().padStart(2, '0');
+    document.getElementById('subcontador-segundos').innerHTML = subContadorSegundosStr;
+    subContadorSegundos--;
+
+    if (contadorSegundos > 19) {
+        document.getElementById('subcontador-segundos').style.color = 'green';
+    } else if (contadorSegundos > 9) { 
+        document.getElementById('subcontador-segundos').style.color = 'yellow';
+    } else {
+        document.getElementById('subcontador-segundos').style.color = 'red';
+    }
+
+    if (contadorSegundos <= -1) {
+        clearInterval(intervalo);
+    }
+
+    if (subContadorSegundos <= -1) {
+        subContadorSegundos = 99;
+    }
+}, 10);
+
+
 async function blabla() {
     for(let i = 0; i < numerosAleatorios.length; i++) {
         numerosAleatorios[i].innerHTML = await generadorNumeroAlearorio()
@@ -46,7 +90,7 @@ for (let casilla of casillas) {
 
     casilla.addEventListener("drop", function (e) {
         e.preventDefault();
-        if (fichaSeleccionada) {
+        if (fichaSeleccionada && casilla.childElementCount === 0) {
             casilla.appendChild(fichaSeleccionada);
             fichaSeleccionada = null;
         }
@@ -67,7 +111,7 @@ for (let casilla of casillas) {
 
     casilla.addEventListener("drop", function (e) {
         e.preventDefault();
-        if (fichaSeleccionada) {
+        if (fichaSeleccionada && casilla.childElementCount === 0) {
             // Clona el elemento antes de agregarlo a la casilla
             casilla.appendChild(fichaSeleccionada.cloneNode(true));
             fichaSeleccionada = null;

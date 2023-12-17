@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -18,6 +18,82 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
+}
+
+.borde-contenedor-contador {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    .contenedor-contador {
+        height: 85%;
+        width: 90%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+    }
+}
+
+.borde-contenedor-contador-derecho {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    .contenedor-contador-derecho {
+        height: 85%;
+        width: 90%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+    }
+}
+
+
+
+
+
+.stop {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(248, 69, 69, 0.952);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(248, 69, 69, 0.952);
+    cursor: pointer;
+    transition: 200ms;
+    border: 1px solid black;
+    transform: translateY(200px);
+
+    &:hover {
+        background-color: seagreen;
+        
+    }
+    
+}
+
+#contador {
+    font-size: 40px;
 }
 
 #borde-tablero {
@@ -45,10 +121,10 @@ body {
 
 
 .ficha-numerica, .ficha-operadora {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border-radius: 10%;
-    background-color: rgb(255, 209, 149);
+    background: rgb(255, 209, 149);
     border: .1px solid;
     box-shadow: 1px 1px 3px black;
     display: flex;
@@ -62,6 +138,26 @@ body {
     }
 
 }
+
+.signo-suma {
+    background-color: rgb(65, 141, 255);
+}
+
+.signo-resta {
+    background-color: rgba(248, 69, 69, 0.952);
+}
+
+.signo-multiplicacion {
+background-color: green;
+}
+
+.signo-division {
+    background-color: yellow;
+}
+
+.signo-igualdad {
+background-color: orange;}
+
 
 
 
@@ -113,6 +209,8 @@ body {
             margin: 10px 0;
         }
 
+        
+
         #fichas-operadoras-1, #fichas-operadoras-2 {
             /* width: 150px; */
             height: auto;
@@ -123,6 +221,8 @@ body {
             /* border: 1px solid; */
             margin: 10px 0;
         }
+
+
     }
 }
 
@@ -134,8 +234,8 @@ body {
     flex-direction: row;
 
     .casilla {
-        height: 40px;
-        width: 40px;
+        height: 34px;
+        width: 34px;
         border: .01px solid;
         background-color: antiquewhite;
         display: flex;
