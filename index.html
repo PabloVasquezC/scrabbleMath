@@ -136,8 +136,6 @@
                     </div>
                 </div>
 
-                
-
                 <div id="fichas-operadoras-1" class="fichas-operadoras seccion-jugador">
                     <div class="ficha-operadora signo-suma" draggable="true">
                         <p class="operador">+</p>
@@ -165,17 +163,17 @@
 
                 </div>
                 <!-- Contador -->
-                <!-- <div class="borde-contenedor-contador">
+                <div class="borde-contenedor-contador">
                     <div class="contenedor-contador">
                         <p id="contador-segundos"></p>
                         :
                         <p id="subcontador-segundos"></p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
 
-        <button class="stop">
+        <button class="stop" id="stop1" onclick="startStop(1)">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
         </button>
 
@@ -389,7 +387,7 @@
         
             
     
-        <button class="stop">
+        <button class="stop" id="stop2" onclick="startStop(2)">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
         </button>
 
@@ -537,13 +535,13 @@
                     
                 </div>
                 <!-- <div id="puntaje-2" class="puntaje seccion-jugador"></div> -->
-                <!-- <div class="borde-contenedor-contador-derecho">
+                <div class="borde-contenedor-contador-derecho">
                     <div class="contenedor-contador-derecho">
-                        <p id="contador-segundos-derecho"></p>
+                        <p id="contador-segundos-2"></p>
                         :
-                        <p id="subcontador-segundos-derecho"></p>
+                        <p id="subcontador-segundos-2"></p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
