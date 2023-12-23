@@ -3,6 +3,11 @@ const fichasNumericas = document.getElementsByClassName('ficha-numerica');
 const fichasOperadoras = document.getElementsByClassName('ficha-operadora');
 const casillas = document.getElementsByClassName('casilla');
 const numerosAleatorios = document.getElementsByClassName('numero-aleatorio');
+const contadorSegundos = document.getElementById('contador-segundos');
+const subContadorSegundos = document.getElementById('subcontador-segundos');
+const contadorSegundos2 = document.getElementById('contador-segundos-2');
+const subContadorSegundos2 = document.getElementById('subcontador-segundos-2');
+
 
 
 function generadorNumeroAlearorio() {
@@ -14,113 +19,109 @@ function generadorNumeroAlearorio() {
 }
 
 
-let contadorSegundos = 100
-let subContadorSegundos = 99
+let segundosActuales = 100
+let subsegundosActuales = 99
 
 // contador para seccion jugador izquierdo
 let intervalo = setInterval(() => {
-    let contadorSegundosStr = contadorSegundos.toString().padStart(2, '0');
-    document.getElementById('contador-segundos').innerHTML = contadorSegundosStr;
-    contadorSegundos--;
+    let segundosActualesStr = segundosActuales.toString().padStart(2, '0');
+    contadorSegundos.innerHTML = segundosActualesStr;
+    segundosActuales--;
 
-    if (contadorSegundos > 66) {
-        document.getElementById('contador-segundos').style.color = 'green';
-    } else if (contadorSegundos > 33) { 
-        document.getElementById('contador-segundos').style.color = 'yellow';
+    if (segundosActuales > 66) {
+        contadorSegundos.style.color = 'green';
+    } else if (segundosActuales > 33) { 
+        contadorSegundos.style.color = 'yellow';
     } else {
-        document.getElementById('contador-segundos').style.color = 'red';
+        contadorSegundos.style.color = 'red';
     }
 
-    if (contadorSegundos <= -1) {
+    if (segundosActuales <= -1) {
         clearInterval(intervalo);
     }
 }, 1000);
 
 let subIntervalo = setInterval(() => {
-    let subContadorSegundosStr = subContadorSegundos.toString().padStart(2, '0');
-    document.getElementById('subcontador-segundos').innerHTML = subContadorSegundosStr;
-    subContadorSegundos--;
+    let subsegundosActualesStr = subsegundosActuales.toString().padStart(2, '0');
+    subContadorSegundos.innerHTML = subsegundosActualesStr;
+    subsegundosActuales--;
 
-    if (contadorSegundos > 66) {
-        document.getElementById('subcontador-segundos').style.color = 'green';
-    } else if (contadorSegundos > 33) { 
-        document.getElementById('subcontador-segundos').style.color = 'yellow';
+    if (segundosActuales > 66) {
+        subContadorSegundos.style.color = 'green';
+    } else if (segundosActuales > 33) { 
+        subContadorSegundos.style.color = 'yellow';
     } else {
-        document.getElementById('subcontador-segundos').style.color = 'red';
+        subContadorSegundos.style.color = 'red';
     }
 
-    if (contadorSegundos <= -1) {
+    if (segundosActuales <= -1) {
         clearInterval(intervalo);
     }
 
-    if (subContadorSegundos <= -1) {
-        subContadorSegundos = 99;
+    if (subsegundosActuales <= -1) {
+        subsegundosActuales = 99;
     }
 }, 10);
 
 
 
 
-let contadorSegundos2 = 100 
-let subContadorSegundos2 = 99
+let segundosActuales2 = 100 
+let subsegundosActuales2 = 99
 
 
 let intervalo2 = setInterval(() => {
-    let contadorSegundosStr2 = contadorSegundos2.toString().padStart(2, '0');
-    document.getElementById('contador-segundos-2').innerHTML = contadorSegundosStr2;
-    contadorSegundos2--;
+    let segundosActualesStr2 = segundosActuales2.toString().padStart(2, '0');
+    contadorSegundos2.innerHTML = segundosActualesStr2;
+    segundosActuales2--;
 
-    if (contadorSegundos2 > 66) {
-        document.getElementById('contador-segundos-2').style.color = 'green';
-    } else if (contadorSegundos2 > 33) { 
-        document.getElementById('contador-segundos-2').style.color = 'yellow';
+    if (segundosActuales2 > 66) {
+        contadorSegundos2.style.color = 'green';
+    } else if (segundosActuales2 > 33) { 
+        contadorSegundos2.style.color = 'yellow';
     } else {
-        document.getElementById('contador-segundos-2').style.color = 'red';
+        contadorSegundos2.style.color = 'red';
     }
 
-    if (contadorSegundos2 <= -1) {
+    if (segundosActuales2 <= -1) {
         clearInterval(intervalo2);
     }  
 }, 1000);
 
 let subIntervalo2 = setInterval(() => { 
-    let subContadorSegundosStr2 = subContadorSegundos2.toString().padStart(2, '0');
-    document.getElementById('subcontador-segundos-2').innerHTML = subContadorSegundosStr2;
-    subContadorSegundos2--;
+    let subsegundosActualesStr2 = subsegundosActuales2.toString().padStart(2, '0');
+    subContadorSegundos2.innerHTML = subsegundosActualesStr2;
+    subsegundosActuales2--;
 
-    if (contadorSegundos2 > 66) {
-        document.getElementById('subcontador-segundos-2').style.color = 'green';
-    } else if (contadorSegundos2 > 33) { 
-        document.getElementById('subcontador-segundos-2').style.color = 'yellow';
+    if (segundosActuales2 > 66) {
+        subContadorSegundos2.style.color = 'green';
+    } else if (segundosActuales2 > 33) { 
+        subContadorSegundos2.style.color = 'yellow';
     } else {
-        document.getElementById('subcontador-segundos-2').style.color = 'red';
+        subContadorSegundos2.style.color = 'red';
     }
 
-    if (contadorSegundos2 <= -1) {
+    if (segundosActuales2 <= -1) {
         clearInterval(intervalo2);
     }
 
-    if (subContadorSegundos2 <= -1) {
-        subContadorSegundos2 = 99;
+    if (subsegundosActuales2 <= -1) {
+        subsegundosActuales2 = 99;
     }
 }, 10);
     
 
 
 
-async function blabla() {
-    for(let i = 0; i < numerosAleatorios.length; i++) {
-        numerosAleatorios[i].innerHTML = await generadorNumeroAlearorio()
-    }
-}
 
-blabla()
+
 
 function startStop(numeroStop) {
     let target = document.getElementById(`stop${numeroStop}`);
     target = target.style.backgroundColor = 'red';
 
     if (numeroStop == 1) {
+    
         clearInterval(intervalo);
         clearInterval(subIntervalo);
         let noTarget = document.getElementById('stop2');
@@ -141,9 +142,14 @@ function startStop(numeroStop) {
 
 
 
+async function blabla() {
+    for(let i = 0; i < numerosAleatorios.length; i++) {
+        numerosAleatorios[i].innerHTML = await generadorNumeroAlearorio()
+    }
+}
 
 
-
+blabla()
 
 let fichaSeleccionada = null;
 
